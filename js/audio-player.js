@@ -1,12 +1,10 @@
 const audio = document.getElementById('bgMusic');
 const playPauseBtn = document.getElementById('playPauseBtn');
-const musicStatus = document.getElementById('musicStatus');
 
 function updateMusicUI() {
   if (!audio) return;
   const playing = !audio.paused;
   playPauseBtn.innerHTML = playing ? '<i class="fa-solid fa-pause"></i>' : '<i class="fa-solid fa-play"></i>';
-  musicStatus.textContent = playing ? 'Playing' : 'Paused';
 }
 
 playPauseBtn?.addEventListener('click', () => {
@@ -15,6 +13,8 @@ playPauseBtn?.addEventListener('click', () => {
     audio.play().catch(() => {});
   } else {
     audio.pause();
+    // fully stop and reset so it doesn't continue
+    try { audio.currentTime = 0; } catch (e) {}
   }
   updateMusicUI();
 });
