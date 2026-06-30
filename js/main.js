@@ -8,7 +8,7 @@ const welcomeOverlay = document.getElementById('welcomeOverlay');
 const openInvitationBtn = document.getElementById('openInvitationBtn');
 const welcomeHeading = document.querySelector('.welcome-card h2');
 const welcomeSubtitle = document.querySelector('.welcome-subtitle');
-const welcomeAudio = document.getElementById('welcomeAudio');
+const bgMusic = document.getElementById('bgMusic');
 
 // Welcome overlay removed — no interaction needed here
 
@@ -52,7 +52,9 @@ if (welcomeOverlay && openInvitationBtn) {
     if (welcomeHeading) welcomeHeading.textContent = "You're Invited";
     if (welcomeSubtitle) welcomeSubtitle.textContent = 'Step inside and celebrate with us';
     openInvitationBtn.textContent = 'Welcome';
-    if (welcomeAudio) welcomeAudio.play().catch(() => {});
+    if (bgMusic) {
+      bgMusic.play().then(() => window.updateMusicUI?.()).catch(() => {});
+    }
     createConfetti();
     setTimeout(() => {
       welcomeOverlay.classList.add('hidden');
