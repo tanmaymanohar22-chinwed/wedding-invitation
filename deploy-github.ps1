@@ -1,4 +1,4 @@
-$repoName = Read-Host "Enter your GitHub repository name"
+$repoName = 'wedding-invitation'
 $gitHubUser = Read-Host "Enter your GitHub username"
 
 Set-Location 'C:\Users\Lenovo\workspace\personal\wedding-invitation'
