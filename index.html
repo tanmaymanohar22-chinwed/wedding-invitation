@@ -21,12 +21,29 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/animations.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/style.css?v=20260630" />
+    <link rel="stylesheet" href="css/animations.css?v=20260630" />
+    <link rel="stylesheet" href="css/responsive.css?v=20260630" />
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css" as="style" />
   </head>
   <body>
+    <div class="welcome-overlay" id="welcomeOverlay" aria-live="polite">
+      <div class="welcome-backdrop"></div>
+      <div class="sparkles" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+      <div class="welcome-card">
+        <div class="floral-bloom" aria-hidden="true"></div>
+        <p class="welcome-caption">A celebration of love</p>
+        <h2>Tap to Open</h2>
+        <p class="welcome-subtitle">A graceful invitation to witness our joyful day</p>
+        <button class="welcome-btn" id="openInvitationBtn">Tap to Open</button>
+      </div>
+      <audio id="welcomeAudio" preload="auto">
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg" />
+      </audio>
+    </div>
+
     <div class="loader" id="loader">
       <div class="loader-ring"></div>
       <p>Preparing our celebration</p>
@@ -198,8 +215,8 @@
 
     <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
 
-    <script src="js/main.js"></script>
-    <script src="js/gallery.js"></script>
-    <script src="js/audio-player.js"></script>
+    <script src="js/main.js?v=20260630"></script>
+    <script src="js/gallery.js?v=20260630"></script>
+    <script src="js/audio-player.js?v=20260630"></script>
   </body>
 </html>
