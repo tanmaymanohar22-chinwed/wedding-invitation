@@ -4,6 +4,13 @@ const backToTop = document.getElementById('backToTop');
 const toggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');
 const revealItems = document.querySelectorAll('.reveal');
+const welcomeOverlay = document.getElementById('welcomeOverlay');
+const openInvitationBtn = document.getElementById('openInvitationBtn');
+const welcomeHeading = document.querySelector('.welcome-card h2');
+const welcomeSubtitle = document.querySelector('.welcome-subtitle');
+const welcomeAudio = document.getElementById('welcomeAudio');
+
+// Welcome overlay removed — no interaction needed here
 
 window.addEventListener('load', () => {
   setTimeout(() => {
@@ -38,6 +45,35 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.15 });
 
 revealItems.forEach((item) => observer.observe(item));
+
+if (welcomeOverlay && openInvitationBtn) {
+  openInvitationBtn.addEventListener('click', () => {
+    welcomeOverlay.classList.add('opening');
+    if (welcomeHeading) welcomeHeading.textContent = "You're Invited";
+    if (welcomeSubtitle) welcomeSubtitle.textContent = 'Step inside and celebrate with us';
+    openInvitationBtn.textContent = 'Welcome';
+    if (welcomeAudio) welcomeAudio.play().catch(() => {});
+    createConfetti();
+    setTimeout(() => {
+      welcomeOverlay.classList.add('hidden');
+    }, 900);
+  });
+}
+
+function createConfetti() {
+  const colors = ['#ffe08a', '#ffffff', '#ffd0d0', '#d4af37'];
+  const pieceCount = 24;
+  for (let i = 0; i < pieceCount; i += 1) {
+    const piece = document.createElement('span');
+    piece.className = 'confetti-piece';
+    piece.style.left = `${Math.random() * 100}%`;
+    piece.style.background = colors[Math.floor(Math.random() * colors.length)];
+    piece.style.setProperty('--x', `${(Math.random() - 0.5) * 240}px`);
+    piece.style.animationDuration = `${1 + Math.random() * 0.6}s`;
+    welcomeOverlay.appendChild(piece);
+    setTimeout(() => piece.remove(), 1400);
+  }
+}
 
 const targetDate = new Date('2026-10-24T15:00:00');
 function updateCountdown() {
