@@ -20,12 +20,14 @@
   .hero-actions { flex-direction: column; align-items: center; }
 
   .welcome-overlay::before {
-    filter: blur(14px) brightness(0.56) saturate(0.86);
-    transform: scale(1.05);
-    background-position: center top;
+    filter: blur(12px) brightness(0.72) saturate(0.92);
+    transform: scale(1);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 
   .welcome-overlay::after {
-    background: linear-gradient(180deg, rgba(22, 18, 27, 0.22), rgba(22, 18, 27, 0.52));
+    background: linear-gradient(180deg, rgba(22, 18, 27, 0.22), rgba(22, 18, 27, 0.5));
   }
 }
