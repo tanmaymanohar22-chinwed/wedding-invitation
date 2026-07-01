@@ -210,6 +210,22 @@ h1, h2, h3 {
   font-family: 'Cormorant Garamond', serif;
   margin: 0 0 0.8rem;
 }
+.hero-content .eyebrow {
+  font-family: 'Cormorant Garamond', serif;
+  color: rgba(250, 250, 250, 0.9);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+  margin-bottom: 1rem;
+}
+.hero-content .subheading {
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 38rem;
+  margin: 0 auto 1.8rem;
+  font-size: clamp(1rem, 1.4vw, 1.25rem);
+  line-height: 1.6;
+  font-weight: 500;
+}
 h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); }
 h2 { font-size: clamp(2rem, 3vw, 2.8rem); }
 .btn {
