@@ -176,6 +176,36 @@ img { width: 100%; display: block; object-fit: cover; }
   color: var(--primary);
   font-weight: 700;
 }
+.story-details {
+  display: grid;
+  gap: 1.1rem;
+  max-width: 760px;
+  margin: 0 auto;
+}
+.story-details p {
+  position: relative;
+  margin: 0;
+  padding-left: 2rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.45rem, 2.2vw, 1.95rem);
+  color: var(--ink);
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+.story-details p::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  top: 0.2rem;
+  color: var(--primary);
+  font-size: 1.25rem;
+}
+.story-details strong {
+  font-weight: 700;
+}
+.story-details .detail-parent {
+  font-style: normal;
+}
 h1, h2, h3 {
   font-family: 'Cormorant Garamond', serif;
   margin: 0 0 0.8rem;
