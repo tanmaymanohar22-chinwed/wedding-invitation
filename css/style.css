@@ -42,7 +42,7 @@ a { color: inherit; text-decoration: none; }
   background: url('/wedding-invitation/images/overlay-bg.jpg') center/cover no-repeat;
   background-size: cover;
   filter: blur(20px) brightness(0.32) saturate(0.72);
-  transform: scale(1);
+  transform: scale(0.92);
   z-index: -1;
 }
 .welcome-overlay::after {
