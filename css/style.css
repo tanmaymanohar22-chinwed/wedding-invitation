@@ -43,14 +43,14 @@ a { color: inherit; text-decoration: none; }
   background-size: cover;
   filter: blur(20px) brightness(0.32) saturate(0.72);
   transform: scale(1.06);
-  z-index: 0;
+  z-index: -1;
 }
 .welcome-overlay::after {
   content: '';
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg, rgba(22, 18, 27, 0.42), rgba(22, 18, 27, 0.72));
-  z-index: 1;
+  z-index: 0;
 }
 .welcome-overlay.hidden {
   opacity: 0;
@@ -70,7 +70,7 @@ a { color: inherit; text-decoration: none; }
 }
 .welcome-card {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   text-align: center;
   max-width: 560px;
   padding: 2.5rem;
