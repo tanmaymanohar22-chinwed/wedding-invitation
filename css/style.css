@@ -25,7 +25,12 @@ a { color: inherit; text-decoration: none; }
 /* Welcome overlay styles (Tap to Open) */
 .welcome-overlay {
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  min-height: 100vh;
   z-index: 3000;
   display: grid;
   place-items: center;
@@ -38,9 +43,13 @@ a { color: inherit; text-decoration: none; }
 .welcome-overlay::before {
   content: '';
   position: absolute;
-  inset: 0;
-  background: url('/wedding-invitation/images/overlay-bg.jpg') center/cover no-repeat;
-  background-size: cover;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('/wedding-invitation/images/overlay-bg.jpg') center center/cover no-repeat;
   filter: blur(20px) brightness(0.32) saturate(0.72);
   transform: scale(0.92);
   z-index: -1;
@@ -48,7 +57,12 @@ a { color: inherit; text-decoration: none; }
 .welcome-overlay::after {
   content: '';
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
   background: linear-gradient(180deg, rgba(22, 18, 27, 0.42), rgba(22, 18, 27, 0.72));
   z-index: 0;
 }
