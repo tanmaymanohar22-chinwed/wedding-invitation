@@ -9,19 +9,44 @@ function updateMusicUI() {
   }
 }
 
-playPauseBtn?.addEventListener('click', () => {
+function startMusic() {
   if (!audio) return;
   if (audio.paused) {
-    audio.play().catch(() => {});
+    const playPromise = audio.play();
+    if (playPromise?.catch) {
+      playPromise.catch(() => {});
+    }
+  }
+  updateMusicUI();
+}
+
+function toggleMusic() {
+  if (!audio) return;
+  if (audio.paused) {
+    startMusic();
   } else {
     audio.pause();
-    // fully stop and reset so it doesn't continue
     try { audio.currentTime = 0; } catch (e) {}
   }
   updateMusicUI();
+}
+
+playPauseBtn?.addEventListener('click', (event) => {
+  event.stopPropagation();
+  toggleMusic();
 });
+
+document.addEventListener('click', () => {
+  if (!audio) return;
+  if (audio.paused && audio.dataset.userUnlocked !== 'true') {
+    startMusic();
+    audio.dataset.userUnlocked = 'true';
+  }
+}, { once: false });
 
 audio?.addEventListener('play', updateMusicUI);
 audio?.addEventListener('pause', updateMusicUI);
 window.updateMusicUI = updateMusicUI;
+window.startMusic = startMusic;
+window.toggleMusic = toggleMusic;
 updateMusicUI();

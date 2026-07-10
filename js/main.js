@@ -54,7 +54,8 @@ if (welcomeOverlay && openInvitationBtn) {
     if (welcomeSubtitle) welcomeSubtitle.textContent = 'Step inside and celebrate with us';
     openInvitationBtn.textContent = 'Welcome';
     if (bgMusic) {
-      bgMusic.play().then(() => window.updateMusicUI?.()).catch(() => {});
+      bgMusic.dataset.userUnlocked = 'true';
+      window.startMusic?.();
     }
     createConfetti();
     setTimeout(() => {
