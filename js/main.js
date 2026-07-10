@@ -9,6 +9,9 @@ const openInvitationBtn = document.getElementById('openInvitationBtn');
 const welcomeHeading = document.querySelector('.welcome-card h2');
 const welcomeSubtitle = document.querySelector('.welcome-subtitle');
 const bgMusic = document.getElementById('bgMusic');
+const rsvpForm = document.getElementById('rsvpForm');
+const rsvpMessage = document.getElementById('rsvpMessage');
+const rsvpSheetUrl = rsvpForm?.dataset.sheetUrl || window.RSVP_GOOGLE_SHEET_URL;
 
 // Welcome overlay removed — no interaction needed here
 
@@ -99,6 +102,66 @@ function updateCountdown() {
   document.getElementById('hours').textContent = String(hours).padStart(2, '0');
   document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
   document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+}
+
+async function submitRsvpToPrivateStore(data) {
+  const url = String(rsvpSheetUrl || '').trim();
+
+  if (!url) {
+    throw new Error('RSVP endpoint is not configured.');
+  }
+
+  const response = await fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      ...data,
+      submittedAt: new Date().toISOString(),
+    }),
+  });
+
+  if (!response.ok) {
+    const errorText = await response.text();
+    throw new Error(errorText || `Request failed with status ${response.status}`);
+  }
+
+  return response.text();
+}
+
+if (rsvpForm) {
+  rsvpForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(rsvpForm);
+    const submission = Object.fromEntries(formData.entries());
+    const name = String(submission.name || '').trim();
+
+    if (!name) {
+      if (rsvpMessage) {
+        rsvpMessage.textContent = 'Please enter your name before sending the RSVP.';
+        rsvpMessage.className = 'form-message error';
+      }
+      return;
+    }
+
+    try {
+      await submitRsvpToPrivateStore(submission);
+      rsvpForm.reset();
+
+      if (rsvpMessage) {
+        rsvpMessage.textContent = `Thank you, ${name}! Your RSVP has been saved privately to your local file.`;
+        rsvpMessage.className = 'form-message success';
+      }
+    } catch (error) {
+      console.error('Unable to save RSVP privately:', error);
+      if (rsvpMessage) {
+        rsvpMessage.textContent = 'Your RSVP could not be saved yet. Please start the local server.';
+        rsvpMessage.className = 'form-message error';
+      }
+    }
+  });
 }
 
 updateCountdown();

@@ -149,7 +149,7 @@
             <p class="section-label">Please respond</p>
             <h2>RSVP</h2>
           </div>
-          <form class="rsvp-form reveal" action="https://formspree.io/f/your-form-id" method="POST">
+          <form id="rsvpForm" class="rsvp-form reveal" data-sheet-url="http://127.0.0.1:8000/api/rsvp" novalidate>
             <input type="text" name="name" placeholder="Full Name" required />
             <input type="email" name="email" placeholder="Email" required />
             <input type="tel" name="phone" placeholder="Phone" />
@@ -161,6 +161,7 @@
             <textarea name="message" rows="4" placeholder="Your blessings or message"></textarea>
             <button type="submit" class="btn btn-primary">Send RSVP</button>
           </form>
+          <p id="rsvpMessage" class="form-message" role="status" aria-live="polite"></p>
         </div>
       </section>
 
