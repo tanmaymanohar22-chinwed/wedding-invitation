@@ -26,7 +26,6 @@ function toggleMusic() {
     startMusic();
   } else {
     audio.pause();
-    try { audio.currentTime = 0; } catch (e) {}
   }
   updateMusicUI();
 }
