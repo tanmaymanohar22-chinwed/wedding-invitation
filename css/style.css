@@ -204,10 +204,9 @@ a { color: inherit; text-decoration: none; }
     margin-bottom: 0.15rem;
     line-height: 1.25;
   }
-  .hero-psalm-ref {
-    font-size: 0.65rem;
+  .hero-psalm-ref, .hero-psalm-inline {
+    font-size: 0.6em;
     margin-bottom: 0.15rem;
-    letter-spacing: 0.14em;
   }
   .hero-subtitle-joy {
     font-size: clamp(1.4rem, 5.5vw, 2rem);
@@ -385,14 +384,15 @@ h1, h2, h3 {
   margin-bottom: 0.3rem;
   letter-spacing: 0.01em;
 }
-.hero-psalm-ref {
-  font-family: 'Montserrat', sans-serif;
-  font-size: clamp(0.75rem, 1.5vw, 0.95rem);
-  font-weight: 700;
-  color: var(--secondary);
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  margin: 0 0 0.6rem;
+.hero-psalm-inline {
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.6em;              /* proportionally smaller than the verse */
+  font-style: italic;
+  font-weight: 600;
+  color: var(--primary);         /* same rich burgundy as the verse */
+  letter-spacing: 0.08em;
+  margin-top: 0.4rem;
 }
 .hero-highlighted-invitation {
   font-family: 'Cormorant Garamond', serif;
