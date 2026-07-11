@@ -51,12 +51,7 @@ a { color: inherit; text-decoration: none; }
   inset: 0;
   width: 100%;
   height: 100%;
-  background: url('../images/overlay-bg.jpg') center center/cover no-repeat;
-  background-position: center;
-  background-size: cover;
-  filter: blur(20px) brightness(0.32) saturate(0.72);
-  transform: scale(1.01);
-  transform-origin: center;
+  background: var(--cream) url('../images/overlay-bg.jpg') center center/contain no-repeat;
   z-index: 0;
 }
 
@@ -77,7 +72,7 @@ a { color: inherit; text-decoration: none; }
   inset: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg, rgba(22, 18, 27, 0.42), rgba(22, 18, 27, 0.72));
+  background: rgba(250, 249, 246, 0.75);
   z-index: 1;
 }
 .welcome-overlay.hidden {
@@ -123,7 +118,7 @@ a { color: inherit; text-decoration: none; }
 }
 .welcome-caption {
   text-transform: uppercase;
-  letter-spacing: 0.3rem;
+  letter-spacing: 0.2rem;
   font-size: 0.8rem;
   color: var(--primary);
   margin-bottom: 0.6rem;
@@ -132,7 +127,7 @@ a { color: inherit; text-decoration: none; }
   font-family: 'Great Vibes', cursive;
   font-size: clamp(2.3rem, 4vw, 3.3rem);
   margin-bottom: 0.8rem;
-  color: var(--ink);
+  color: var(--primary);
 }
 .welcome-subtitle {
   font-size: 1rem;
@@ -249,9 +244,10 @@ h1, h2, h3 {
 }
 .hero-content h1 {
   color: var(--primary);
-  font-size: clamp(2.2rem, 5vw, 4.5rem);
+  font-size: clamp(1.2rem, 3vw, 2.5rem);
   line-height: 1.2;
   margin-bottom: 1.2rem;
+  white-space: nowrap;
 }
 .hero-content .subheading {
   color: var(--muted);
@@ -290,6 +286,17 @@ h2 { font-size: clamp(2rem, 3vw, 2.8rem); }
   font-family: 'Great Vibes', cursive;
   font-size: 1.75rem;
   color: var(--primary);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.brand-sub {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  margin-right: 0.5rem;
+  text-transform: uppercase;
+  color: var(--ink);
 }
 .nav-links { display: flex; gap: 1rem; }
 .nav-links a { color: var(--ink); font-weight: 600; }
@@ -307,7 +314,7 @@ h2 { font-size: clamp(2rem, 3vw, 2.8rem); }
   display: grid;
   place-items: center;
   text-align: center;
-  padding: 6rem 1.5rem 3rem;
+  padding: 4.5rem 1.5rem 3rem;
   background: #fefbf6;
   color: var(--ink);
 }
@@ -424,6 +431,9 @@ blockquote span { display: block; margin-top: 0.8rem; font-size: 0.95rem; color:
   display: grid;
   gap: 0.7rem;
 }
+.schedule-section {
+  padding-top: 8rem;
+}
 .schedule-list {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -467,14 +477,18 @@ blockquote span { display: block; margin-top: 0.8rem; font-size: 0.95rem; color:
 }
 @media (max-width: 768px) {
   .brand {
-    font-size: clamp(0.78rem, 3.2vw, 1.1rem);
-    white-space: nowrap;
-    letter-spacing: -0.02em;
+    font-size: 1.3rem;
+    white-space: normal;
+  }
+  .brand-sub {
+    font-size: 0.65rem;
+    display: block;
+    width: 100%;
   }
   .mobile-br {
     display: inline;
   }
   .hero-content h1 {
-    font-size: clamp(1.6rem, 7vw, 2.2rem);
+    font-size: clamp(0.7rem, 3.2vw, 1.2rem);
   }
 }
