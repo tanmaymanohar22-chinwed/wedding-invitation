@@ -490,7 +490,10 @@ h2 { font-size: clamp(2rem, 3vw, 2.8rem); }
   position: absolute; right: 2rem; bottom: 2rem; font-size: 2rem; color: var(--secondary);
   animation: drift 4s ease-in-out infinite;
 }
-.verse-section { background: linear-gradient(135deg, rgba(212,175,55,0.13), rgba(128,0,32,0.04)); }
+.verse-section { 
+  background: linear-gradient(rgba(254, 251, 246, 0.85), rgba(254, 251, 246, 0.85)), url('../images/bg_option2.jpg') center center/cover no-repeat;
+  background-attachment: fixed;
+}
 blockquote {
   font-size: clamp(1.4rem, 2.2vw, 2rem);
   font-family: 'Cormorant Garamond', serif;
