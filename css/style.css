@@ -62,13 +62,13 @@ a { color: inherit; text-decoration: none; }
 
 @media (max-width: 768px) {
   .hero {
-    background-position: center top;
-    background-size: auto 100%;
+    background-position: center;
+    background-size: contain;
     background-repeat: no-repeat;
   }
   .welcome-bg {
-    background-position: center top;
-    background-size: auto 100%;
+    background-position: center;
+    background-size: cover;
     transform: scale(1.02);
     filter: blur(16px) brightness(0.34) saturate(0.72);
   }
@@ -243,14 +243,20 @@ h1, h2, h3 {
 }
 .hero-content .eyebrow {
   font-family: 'Cormorant Garamond', serif;
-  color: rgba(250, 250, 250, 0.9);
+  color: var(--primary);
   text-transform: uppercase;
   letter-spacing: 0.2em;
   font-size: clamp(0.95rem, 1.2vw, 1.05rem);
   margin-bottom: 1rem;
 }
+.hero-content h1 {
+  color: var(--primary);
+  font-size: clamp(2.2rem, 5vw, 4.5rem);
+  line-height: 1.2;
+  margin-bottom: 1.2rem;
+}
 .hero-content .subheading {
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--muted);
   max-width: 38rem;
   margin: 0 auto 1.8rem;
   font-size: clamp(1rem, 1.4vw, 1.25rem);
@@ -304,13 +310,14 @@ h2 { font-size: clamp(2rem, 3vw, 2.8rem); }
   place-items: center;
   text-align: center;
   padding: 5rem 1.5rem 3rem;
-  background: linear-gradient(rgba(0,0,0,0.42), rgba(0,0,0,0.42)), url('../images/overlay-bg.jpg') center/cover, #111;
-  color: white;
+  background: #fefbf6 url('../images/overlay-bg.jpg') no-repeat center/contain;
+  color: var(--ink);
 }
 .hero::after {
   content: '';
   position: absolute; inset: 0;
   background: radial-gradient(circle at top, rgba(212,175,55,0.16), transparent 45%);
+  pointer-events: none;
 }
 .hero-content, .hero-float { position: relative; z-index: 1; }
 .eyebrow {
@@ -325,10 +332,22 @@ h2 { font-size: clamp(2rem, 3vw, 2.8rem); }
   display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-top: 2rem;
 }
 .countdown > div {
-  min-width: 90px; padding: 1rem; border: 1px solid rgba(255,255,255,0.3); border-radius: 16px; background: rgba(255,255,255,0.14); backdrop-filter: blur(8px);
+  min-width: 90px;
+  padding: 1rem;
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
 }
-.countdown span { display: block; font-size: 1.8rem; font-weight: 700; }
-.countdown small { color: rgba(255,255,255,0.85); }
+.countdown span {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+.countdown small {
+  color: var(--muted);
+}
 .hero-float {
   position: absolute; right: 2rem; bottom: 2rem; font-size: 2rem; color: var(--secondary);
   animation: drift 4s ease-in-out infinite;
@@ -408,3 +427,18 @@ blockquote span { display: block; margin-top: 0.8rem; font-size: 0.95rem; color:
   position: absolute; top: 1rem; right: 1rem; background: transparent; border: none; color: white; font-size: 2rem; cursor: pointer;
 }
 @keyframes drift { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+
+.mobile-br {
+  display: none;
+}
+@media (max-width: 768px) {
+  .brand-sub {
+    display: none;
+  }
+  .mobile-br {
+    display: inline;
+  }
+  .hero-content h1 {
+    font-size: clamp(1.6rem, 7vw, 2.2rem);
+  }
+}
