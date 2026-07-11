@@ -178,7 +178,8 @@ a { color: inherit; text-decoration: none; }
 
   /* Brand: all on one line, small font */
   .brand {
-    font-size: 0.72rem;
+    font-size: 0.85rem;
+    font-weight: 700;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -189,7 +190,8 @@ a { color: inherit; text-decoration: none; }
     gap: 0.2rem;
   }
   .brand-sub {
-    font-size: 0.6rem;
+    font-size: 0.72rem;
+    font-weight: 700;
     display: inline;
     width: auto;
     white-space: nowrap;
@@ -373,7 +375,8 @@ h2 { font-size: clamp(2rem, 3vw, 2.8rem); }
 .navbar.scrolled { background: rgba(250, 249, 246, 0.95); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
 .brand {
   font-family: 'Great Vibes', cursive;
-  font-size: 1.75rem;
+  font-size: 2rem;
+  font-weight: 700;
   color: var(--primary);
   display: flex;
   align-items: center;
@@ -381,7 +384,8 @@ h2 { font-size: clamp(2rem, 3vw, 2.8rem); }
 }
 .brand-sub {
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
+  font-weight: 700;
   letter-spacing: 0.05em;
   margin-right: 0.5rem;
   text-transform: uppercase;
