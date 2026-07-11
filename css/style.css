@@ -152,8 +152,8 @@ a { color: inherit; text-decoration: none; }
 }
 @media (max-width: 768px) {
   .hero {
-    background-size: contain;
-    background-position: center center;
+    background-size: 100% auto;
+    background-position: center top;
     background-color: #fefbf6;
   }
 
