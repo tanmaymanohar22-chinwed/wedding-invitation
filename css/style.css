@@ -158,8 +158,8 @@ a { color: inherit; text-decoration: none; }
     background-size: cover !important;
     background-position: center top;
     background-color: #fefbf6;
-    padding-top: 4.5rem; /* tighter clearance so content sits higher */
-    padding-bottom: 2rem;
+    padding-top: 4.5rem;
+    padding-bottom: 1.5rem;
     justify-content: flex-start;
   }
   .hero-content {
@@ -168,13 +168,20 @@ a { color: inherit; text-decoration: none; }
     flex-direction: column;
     justify-content: space-between;
     flex: 1;
-    min-height: calc(100vh - 6rem - 2rem);
-    gap: 0.6rem;
+    min-height: calc(100vh - 4.5rem - 1.5rem);
+    gap: 0;
     margin-top: 0;
   }
   .hero-names-section {
     margin-top: 0;
     padding-top: 0;
+  }
+  .hero-details-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding-bottom: 0.5rem;
   }
 
   /* Brand: wrap on mobile to prevent cut-off */
@@ -197,69 +204,46 @@ a { color: inherit; text-decoration: none; }
     margin-right: 0 !important;
   }
 
-  /* === ABOVE CROSS: tightly packed === */
+  /* === ABOVE CROSS: compact fonts === */
   .hero-bible-heading {
-    font-size: clamp(1.15rem, 4.5vw, 1.5rem);
+    font-size: clamp(1rem, 4vw, 1.3rem);
     margin-top: 0;
-    margin-bottom: 0.15rem;
-    line-height: 1.25;
+    margin-bottom: 0.1rem;
+    line-height: 1.2;
   }
   .hero-psalm-ref, .hero-psalm-inline {
     font-size: 0.6em;
-    margin-bottom: 0.15rem;
+    margin-bottom: 0.1rem;
   }
   .hero-subtitle-joy {
-    font-size: clamp(1.4rem, 5.5vw, 2rem);
-    margin-top: 0.1rem;
-    margin-bottom: 0; /* no gap — sits just above cross */
+    font-size: clamp(1.2rem, 5vw, 1.7rem);
+    margin-top: 0.05rem;
+    margin-bottom: 0;
   }
 
-  /* === BELOW CROSS: pushed down past the cross === */
+  /* === BELOW CROSS & RINGS: invitation + small timer === */
   .hero-highlighted-invitation {
-    font-size: 0.92rem;
-    line-height: 1.4;
-    margin-top: 11rem; /* large gap so invitation falls below the cross */
+    font-size: 0.82rem;
+    line-height: 1.35;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    padding: 0 1rem;
   }
 
-  /* Family section mobile styles */
-  .family-section {
-    padding: 5rem 1rem;
-  }
-  .family-eyebrow {
-    font-size: 1.2rem;
-    margin-bottom: 0.3rem;
-  }
-  .family-subheading {
-    font-size: 0.95rem;
-    margin-bottom: 1.2rem;
-    line-height: 1.4;
-  }
-  .family-names {
-    font-size: clamp(2rem, 8vw, 2.6rem);
-    margin-bottom: 0.6rem;
-  }
-  .family-parents {
-    font-size: 0.78rem;
-    margin-top: 1rem;
-  }
-  .family-parents p {
-    margin: 0.15rem 0;
-  }
-
-  /* Countdown - sits at the bottom */
+  /* Countdown — small & compact */
   .countdown {
     margin-top: 0;
-    gap: 0.5rem;
+    gap: 0.35rem;
   }
   .countdown > div {
-    min-width: 65px;
-    padding: 0.6rem 0.4rem;
+    min-width: 52px;
+    padding: 0.4rem 0.3rem;
   }
   .countdown span {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   .countdown small {
-    font-size: 0.65rem;
+    font-size: 0.55rem;
   }
 }
 .sparkles {
