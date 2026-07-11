@@ -155,6 +155,12 @@ a { color: inherit; text-decoration: none; }
     background-size: 100% auto;
     background-position: center top;
     background-color: #fefbf6;
+    padding-top: 5.5rem;
+    align-items: flex-start;
+  }
+  .hero-content {
+    margin-top: -1.5rem;
+    gap: 0.6rem;
   }
 
   /* Brand: all on one line, small font */
@@ -180,8 +186,8 @@ a { color: inherit; text-decoration: none; }
   .hero-content .eyebrow {
     font-size: 0.7rem;
     letter-spacing: 0.1em;
-    margin-bottom: 0.3rem;
-    margin-top: -1rem;
+    margin-bottom: 0.2rem;
+    margin-top: 0;
   }
 
   /* DR. JOEL DAVID & DR. SHAKINAH JOY - slightly larger */
@@ -200,7 +206,7 @@ a { color: inherit; text-decoration: none; }
 
   /* Countdown - push down and smaller */
   .countdown {
-    margin-top: 3.5rem;
+    margin-top: 6rem;
     gap: 0.5rem;
   }
   .countdown > div {
