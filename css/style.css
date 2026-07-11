@@ -385,7 +385,7 @@ h2 { font-size: clamp(2rem, 3vw, 2.8rem); }
   place-items: center;
   text-align: center;
   padding: 4.5rem 1.5rem 3rem;
-  background: #fefbf6 url('../images/overlay-bg.jpg') center center/cover no-repeat;
+  background: #fefbf6 url('../images/overlay-bg.jpg') center center/contain no-repeat;
   color: var(--ink);
 }
 .hero::before {
