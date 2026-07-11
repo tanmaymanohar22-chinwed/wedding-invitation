@@ -147,6 +147,72 @@ a { color: inherit; text-decoration: none; }
   cursor: pointer;
   box-shadow: 0 10px 24px rgba(0,0,0,0.15);
 }
+.mobile-br {
+  display: none;
+}
+@media (max-width: 768px) {
+  .hero {
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* Brand: all on one line, small font */
+  .brand {
+    font-size: 0.72rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 70vw;
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 0.2rem;
+  }
+  .brand-sub {
+    font-size: 0.6rem;
+    display: inline;
+    width: auto;
+    white-space: nowrap;
+  }
+
+  /* "You are warmly invited..." - move up */
+  .hero-content .eyebrow {
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.3rem;
+    margin-top: -1rem;
+  }
+
+  /* DR. JOEL DAVID & DR. SHAKINAH JOY - slightly larger */
+  .hero-content h1 {
+    font-size: clamp(1.1rem, 4.5vw, 1.6rem);
+    white-space: nowrap;
+    margin-bottom: 0.5rem;
+  }
+
+  /* "Join us as we begin..." - move up */
+  .hero-content .subheading {
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+    margin-top: -0.5rem;
+  }
+
+  /* Countdown - push down and smaller */
+  .countdown {
+    margin-top: 3.5rem;
+    gap: 0.5rem;
+  }
+  .countdown > div {
+    min-width: 65px;
+    padding: 0.6rem 0.4rem;
+  }
+  .countdown span {
+    font-size: 1.2rem;
+  }
+  .countdown small {
+    font-size: 0.65rem;
+  }
+}
 .sparkles {
   position: absolute;
   inset: 0;
@@ -483,27 +549,4 @@ blockquote span { display: block; margin-top: 0.8rem; font-size: 0.95rem; color:
 }
 @keyframes drift { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
 
-.mobile-br {
-  display: none;
-}
-@media (max-width: 768px) {
-  .hero {
-    background-size: contain;
-    background-position: center;
-  }
-  .brand {
-    font-size: 1.3rem;
-    white-space: normal;
-  }
-  .brand-sub {
-    font-size: 0.65rem;
-    display: block;
-    width: 100%;
-  }
-  .mobile-br {
-    display: inline;
-  }
-  .hero-content h1 {
-    font-size: clamp(0.7rem, 3.2vw, 1.2rem);
-  }
-}
+
