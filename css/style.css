@@ -491,8 +491,7 @@ h2 { font-size: clamp(2rem, 3vw, 2.8rem); }
   animation: drift 4s ease-in-out infinite;
 }
 .verse-section { 
-  background: linear-gradient(rgba(254, 251, 246, 0.85), rgba(254, 251, 246, 0.85)), url('../images/bg_option2.jpg') center center/cover no-repeat;
-  background-attachment: fixed;
+  background: linear-gradient(rgba(254, 251, 246, 0.55), rgba(254, 251, 246, 0.55)), url('../images/bg_option2.jpg') center center/cover no-repeat;
 }
 blockquote {
   font-size: clamp(1.4rem, 2.2vw, 2rem);
