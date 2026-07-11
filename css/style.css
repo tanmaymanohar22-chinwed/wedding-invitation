@@ -353,11 +353,13 @@ h1, h2, h3 {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(1rem, 2vw, 1.3rem);
   font-style: italic;
-  font-weight: 600;
-  color: var(--secondary);
+  font-weight: 700;
+  color: var(--primary);
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  margin-bottom: 0.8rem;
+  margin-top: 0.8rem;
+  margin-bottom: 0.4rem;
+  text-shadow: 0 1px 6px rgba(255,255,255,0.7);
 }
 .hero-subtitle-joy .amp {
   font-family: 'Great Vibes', cursive;
