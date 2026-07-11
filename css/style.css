@@ -196,24 +196,25 @@ a { color: inherit; text-decoration: none; }
     margin-right: 0 !important;
   }
 
-  /* Hero: With Gratitude & Love - mobile */
-  .hero-title-gratitude {
-    font-size: clamp(1.7rem, 6.5vw, 2.3rem);
+  /* Hero subtitle & bible heading - mobile */
+  .hero-subtitle-joy {
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+  }
+  .hero-bible-heading {
+    font-size: clamp(1.4rem, 5.5vw, 2rem);
     margin-bottom: 0.8rem;
+    line-height: 1.3;
   }
-  .hero-bible-quote {
-    font-size: 1rem;
-    margin-bottom: 1.2rem;
-    line-height: 1.5;
-  }
-  .hero-bible-quote span {
-    font-size: 0.8rem;
-    margin-top: 0.2rem;
+  .hero-bible-heading span {
+    font-size: 0.55em;
+    margin-top: 0.4rem;
   }
   .hero-highlighted-invitation {
-    font-size: 1.15rem;
+    font-size: 0.95rem;
     line-height: 1.4;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
   }
 
   /* Family section mobile styles */
@@ -347,53 +348,54 @@ h1, h2, h3 {
   font-family: 'Cormorant Garamond', serif;
   margin: 0 0 0.8rem;
 }
-/* Hero: With Gratitude & Love styles */
-.hero-title-gratitude {
+/* Hero Section: Bible verse as main heading, subtitle above */
+.hero-subtitle-joy {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(2rem, 5vw, 3.8rem);
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  font-style: italic;
+  font-weight: 600;
+  color: var(--secondary);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+}
+.hero-subtitle-joy .amp {
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.3em;
+  font-weight: normal;
   text-transform: none;
+  letter-spacing: 0;
+  margin: 0 0.15rem;
+}
+.hero-bible-heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.8rem, 4vw, 3.2rem);
+  font-style: italic;
   font-weight: 600;
   color: var(--primary);
+  line-height: 1.35;
   margin-bottom: 1.2rem;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
 }
-.hero-title-gratitude .amp {
-  font-family: 'Great Vibes', cursive;
-  font-size: 1.2em;
-  font-weight: normal;
-  margin: 0 0.2rem;
-}
-.hero-bible-quote {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(1.1rem, 2.2vw, 1.5rem);
-  font-style: italic;
-  color: var(--ink);
-  max-width: 650px;
-  margin: 0 auto 1.5rem;
-  line-height: 1.6;
-  border: none;
-  padding: 0;
-  text-align: center;
-}
-.hero-bible-quote span {
+.hero-bible-heading span {
   display: block;
-  font-size: 0.9rem;
+  font-size: 0.5em;
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
+  font-weight: 700;
   color: var(--secondary);
-  margin-top: 0.4rem;
-  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.18em;
+  margin-top: 0.6rem;
 }
 .hero-highlighted-invitation {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
   font-style: italic;
-  font-weight: 600;
-  color: var(--primary);
+  font-weight: 500;
+  color: var(--ink);
   max-width: 700px;
-  margin: 1.5rem auto 0;
+  margin: 0 auto 0;
   line-height: 1.5;
   text-align: center;
 }
