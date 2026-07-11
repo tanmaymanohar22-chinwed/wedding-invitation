@@ -174,6 +174,7 @@ a { color: inherit; text-decoration: none; }
   }
   .hero-names-section {
     margin-top: 0;
+    padding-top: 0;
   }
 
   /* Brand: wrap on mobile to prevent cut-off */
@@ -197,20 +198,21 @@ a { color: inherit; text-decoration: none; }
   }
 
   /* Hero subtitle & bible heading - mobile */
-  .hero-subtitle-joy {
-    font-size: clamp(1.6rem, 6vw, 2.2rem);
-    margin-top: 0.4rem;
-    margin-bottom: 0.2rem;
-  }
   .hero-bible-heading {
     font-size: clamp(1.3rem, 5vw, 1.8rem);
-    margin-bottom: 0.6rem;
+    margin-bottom: 0.2rem;
     line-height: 1.3;
     margin-top: 0;
   }
-  .hero-bible-heading span {
-    font-size: 0.55em;
-    margin-top: 0.3rem;
+  .hero-psalm-ref {
+    font-size: 0.7rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.14em;
+  }
+  .hero-subtitle-joy {
+    font-size: clamp(1.6rem, 6vw, 2.2rem);
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
   }
   .hero-highlighted-invitation {
     font-size: 0.95rem;
@@ -355,12 +357,12 @@ h1, h2, h3 {
   font-size: clamp(2rem, 3.5vw, 2.8rem);
   font-style: normal;
   font-weight: normal;
-  color: var(--secondary); /* rich gold — pops against the floral cream background */
+  color: #800020; /* rich burgundy */
   letter-spacing: 0.04em;
   text-transform: none;
   margin-top: 0.6rem;
   margin-bottom: 0.2rem;
-  text-shadow: 0 2px 8px rgba(255,255,255,0.8);
+  text-shadow: 0 2px 10px rgba(255,255,255,0.9);
 }
 .hero-subtitle-joy .amp {
   font-family: 'Great Vibes', cursive;
@@ -377,19 +379,18 @@ h1, h2, h3 {
   font-weight: 600;
   color: var(--primary);
   line-height: 1.35;
-  margin-bottom: 1.2rem;
+  margin-top: 0;
+  margin-bottom: 0.3rem;
   letter-spacing: 0.01em;
 }
-.hero-bible-heading span {
-  display: block;
-  font-size: 0.5em;
+.hero-psalm-ref {
   font-family: 'Montserrat', sans-serif;
-  font-style: normal;
+  font-size: clamp(0.75rem, 1.5vw, 0.95rem);
   font-weight: 700;
   color: var(--secondary);
   text-transform: uppercase;
   letter-spacing: 0.18em;
-  margin-top: 0.6rem;
+  margin: 0 0 0.6rem;
 }
 .hero-highlighted-invitation {
   font-family: 'Cormorant Garamond', serif;
