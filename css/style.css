@@ -363,7 +363,7 @@ h1, h2, h3 {
   font-size: 0.5em;
   font-style: normal;
   font-weight: 700;
-  color: var(--secondary);
+  color: var(--primary);
   text-transform: uppercase;
   letter-spacing: 0.18em;
   margin-top: 0.5rem;
