@@ -415,21 +415,22 @@ h1, h2, h3 {
 }
 .family-eyebrow {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.5rem;
+  font-size: clamp(2rem, 4vw, 3rem);
   font-style: italic;
-  color: var(--primary); /* Changed to rich burgundy for contrast */
-  margin-bottom: 0.5rem;
-  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 0.4rem;
+  font-weight: 700;
+  line-height: 1.2;
 }
 .family-subheading {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.25rem;
+  font-size: clamp(1.5rem, 3vw, 2rem);
   font-style: italic;
-  color: var(--ink);
+  color: var(--primary);
   max-width: 600px;
-  margin: 0.5rem auto 1.8rem;
+  margin: 0.3rem auto 1.8rem;
   line-height: 1.6;
-  font-weight: 500;
+  font-weight: 600;
 }
 .family-names {
   font-family: 'Cormorant Garamond', serif;
