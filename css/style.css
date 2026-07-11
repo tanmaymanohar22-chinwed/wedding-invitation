@@ -197,26 +197,50 @@ a { color: inherit; text-decoration: none; }
     white-space: nowrap;
   }
 
-  /* "You are warmly invited..." - move up */
+  /* "Together with families" - mobile */
   .hero-content .eyebrow {
-    font-size: 0.7rem;
-    letter-spacing: 0.1em;
-    margin-bottom: 0.2rem;
+    font-size: 1.05rem;
+    font-style: italic;
+    text-transform: none;
+    letter-spacing: 0.02em;
+    margin-bottom: 0.3rem;
     margin-top: 0;
   }
 
-  /* DR. JOEL DAVID & DR. SHAKINAH JOY - slightly larger */
+  /* "Joel & Joy" - mobile */
   .hero-content h1 {
-    font-size: clamp(1.1rem, 4.5vw, 1.6rem);
+    font-size: clamp(1.6rem, 6vw, 2.2rem);
+    text-transform: none;
     white-space: nowrap;
     margin-bottom: 0.5rem;
   }
+  .hero-content h1 .amp {
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.2em;
+    font-weight: normal;
+    margin: 0 0.2rem;
+  }
 
-  /* "Join us as we begin..." - move up */
+  /* "cordially invite you..." - mobile */
   .hero-content .subheading {
-    font-size: 0.85rem;
-    margin-bottom: 0.5rem;
-    margin-top: -0.5rem;
+    font-size: 0.9rem;
+    font-style: italic;
+    text-transform: none;
+    margin-bottom: 0.8rem;
+    margin-top: 0.2rem;
+    line-height: 1.4;
+  }
+
+  /* Parent details - mobile */
+  .hero-parents {
+    font-size: 0.72rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    text-transform: none;
+    letter-spacing: 0.02em;
+  }
+  .hero-parents p {
+    margin: 0.1rem 0;
   }
 
   /* Countdown - sits at the bottom */
@@ -327,26 +351,52 @@ h1, h2, h3 {
 }
 .hero-content .eyebrow {
   font-family: 'Cormorant Garamond', serif;
-  color: var(--primary);
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  font-size: clamp(0.95rem, 1.2vw, 1.05rem);
-  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  font-style: italic;
+  color: var(--secondary);
+  text-transform: none;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
 }
 .hero-content h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  text-transform: none;
+  font-weight: 600;
   color: var(--primary);
-  font-size: clamp(1.2rem, 3vw, 2.5rem);
-  line-height: 1.2;
-  margin-bottom: 1.2rem;
-  white-space: nowrap;
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.02em;
+}
+.hero-content h1 .amp {
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.2em;
+  font-weight: normal;
+  margin: 0 0.2rem;
 }
 .hero-content .subheading {
-  color: var(--muted);
-  max-width: 38rem;
-  margin: 0 auto 1.8rem;
-  font-size: clamp(1rem, 1.4vw, 1.25rem);
-  line-height: 1.6;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  font-style: italic;
+  color: var(--ink);
+  text-transform: none;
+  max-width: 600px;
+  margin: 0.5rem auto 1.5rem;
+  line-height: 1.5;
   font-weight: 500;
+}
+.hero-parents {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--ink);
+  text-transform: none;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+.hero-parents p {
+  margin: 0.2rem 0;
 }
 h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); }
 h2 { font-size: clamp(2rem, 3vw, 2.8rem); }
