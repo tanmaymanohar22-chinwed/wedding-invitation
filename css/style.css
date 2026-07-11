@@ -150,89 +150,7 @@ a { color: inherit; text-decoration: none; }
 .mobile-br {
   display: none;
 }
-@media (max-width: 768px) {
-  .hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-size: cover;
-    background-position: center top;
-    background-color: #fefbf6;
-    padding-top: 6rem; /* clear the fixed 2-line navbar */
-    padding-bottom: 2rem;
-    justify-content: flex-start;
-  }
-  .hero-content {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex: 1;
-    min-height: calc(100vh - 6rem - 2rem);
-    gap: 0.6rem;
-    margin-top: 0;
-  }
-  .hero-names-section {
-    margin-top: 0;
-  }
 
-  /* Brand: all on one line, small font */
-  .brand {
-    font-size: 0.72rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 70vw;
-    display: inline-flex;
-    align-items: center;
-    flex-wrap: nowrap;
-    gap: 0.2rem;
-  }
-  .brand-sub {
-    font-size: 0.6rem;
-    display: inline;
-    width: auto;
-    white-space: nowrap;
-  }
-
-  /* "You are warmly invited..." - move up */
-  .hero-content .eyebrow {
-    font-size: 0.7rem;
-    letter-spacing: 0.1em;
-    margin-bottom: 0.2rem;
-    margin-top: 0;
-  }
-
-  /* DR. JOEL DAVID & DR. SHAKINAH JOY - slightly larger */
-  .hero-content h1 {
-    font-size: clamp(1.1rem, 4.5vw, 1.6rem);
-    white-space: nowrap;
-    margin-bottom: 0.5rem;
-  }
-
-  /* "Join us as we begin..." - move up */
-  .hero-content .subheading {
-    font-size: 0.85rem;
-    margin-bottom: 0.5rem;
-    margin-top: -0.5rem;
-  }
-
-  /* Countdown - sits at the bottom */
-  .countdown {
-    margin-top: 0;
-    gap: 0.5rem;
-  }
-  .countdown > div {
-    min-width: 65px;
-    padding: 0.6rem 0.4rem;
-  }
-  .countdown span {
-    font-size: 1.2rem;
-  }
-  .countdown small {
-    font-size: 0.65rem;
-  }
-}
 .sparkles {
   position: absolute;
   inset: 0;
@@ -571,4 +489,46 @@ blockquote span { display: block; margin-top: 0.8rem; font-size: 0.95rem; color:
 }
 @keyframes drift { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
 
-
+@media (max-width: 768px) {
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-size: cover;
+    background-position: center top;
+    background-color: #fefbf6;
+    padding-top: 6rem;
+    padding-bottom: 2rem;
+    justify-content: flex-start;
+  }
+  .hero-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    min-height: calc(100vh - 6rem - 2rem);
+    gap: 0.6rem;
+    margin-top: 0;
+  }
+  .hero-names-section { margin-top: 0; }
+  .brand {
+    font-size: 0.72rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 70vw;
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 0.2rem;
+  }
+  .brand-sub { font-size: 0.6rem; display: inline; width: auto; white-space: nowrap; }
+  .hero-content .eyebrow { font-size: 0.7rem; letter-spacing: 0.1em; margin-bottom: 0.2rem; margin-top: 0; }
+  .hero-content h1 { font-size: clamp(1.1rem, 4.5vw, 1.6rem); white-space: nowrap; margin-bottom: 0.5rem; }
+  .hero-content .subheading { font-size: 0.85rem; margin-bottom: 0.5rem; margin-top: -0.5rem; }
+  .countdown { margin-top: 0; gap: 0.5rem; }
+  .countdown > div { min-width: 65px; padding: 0.6rem 0.4rem; }
+  .countdown span { font-size: 1.2rem; }
+  .countdown small { font-size: 0.65rem; }
+}
