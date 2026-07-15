@@ -929,6 +929,15 @@ blockquote span { display: block; margin-top: 0.8rem; font-size: 0.95rem; color:
   background-color: #fefbf6;
   text-align: center;
 }
+.reveal-section .section-label {
+  font-size: clamp(1.6rem, 5vw, 2.2rem);
+  text-transform: none;
+  letter-spacing: 0;
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+}
 .reveal-container {
   display: flex;
   flex-direction: column;
@@ -940,13 +949,13 @@ blockquote span { display: block; margin-top: 0.8rem; font-size: 0.95rem; color:
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
-  flex-wrap: wrap;
+  gap: clamp(0.5rem, 2vw, 1.2rem);
+  flex-wrap: nowrap; /* Force side-by-side on phones */
 }
 .scratch-wrapper {
   position: relative;
-  width: 120px;
-  height: 120px;
+  width: clamp(85px, 28vw, 125px);
+  height: clamp(85px, 28vw, 125px);
   margin: 0;
   border-radius: 12px;
   overflow: hidden;
@@ -963,7 +972,7 @@ blockquote span { display: block; margin-top: 0.8rem; font-size: 0.95rem; color:
   background: #fdfaf5;
 }
 .scratch-content h3 {
-  font-size: 2.2rem;
+  font-size: clamp(1.6rem, 6vw, 2.8rem);
   color: var(--primary);
   margin: 0;
   font-family: 'Great Vibes', cursive;
@@ -999,4 +1008,15 @@ blockquote span { display: block; margin-top: 0.8rem; font-size: 0.95rem; color:
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
+}
+.reveal-section .countdown {
+  width: 100%;
+  max-width: 400px; /* Matches the ~400px width of the 3 scratch blocks */
+  margin: 0 auto;
+  gap: clamp(0.4rem, 2vw, 0.8rem);
+}
+.reveal-section .countdown > div {
+  flex: 1;
+  min-width: 0; /* allows shrinking below content size if needed */
+  padding: clamp(0.5rem, 2vw, 1rem) 0.2rem;
 }
