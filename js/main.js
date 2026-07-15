@@ -80,7 +80,10 @@ if (scheduleCards.length && scheduleList) {
     if (offset < 0) offset = 0;
     if (offset > rect.height) offset = rect.height;
     
+    const scrollPct = rect.height > 0 ? (offset / rect.height) * 100 : 0;
+    
     scheduleList.style.setProperty('--ball-top', `${offset}px`);
+    scheduleList.style.setProperty('--scroll-pct', scrollPct);
   };
 
   window.addEventListener('scroll', updateScheduleRail, { passive: true });

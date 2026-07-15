@@ -149,6 +149,28 @@
             <p class="section-label">Marriage Schedule</p>
           </div>
           <div class="schedule-list">
+            <!-- Winding Path SVG -->
+            <svg class="winding-path-svg" viewBox="0 0 100 1000" preserveAspectRatio="none">
+              <!-- Defs for glowing effect -->
+              <defs>
+                <linearGradient id="gold-glow" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="rgba(212, 175, 55, 0.2)" />
+                  <stop offset="50%" stop-color="rgba(212, 175, 55, 1)" />
+                  <stop offset="100%" stop-color="rgba(212, 175, 55, 0.2)" />
+                </linearGradient>
+                <filter id="glow-filter" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+                  <feMerge>
+                    <feMergeNode in="coloredBlur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                  </feMerge>
+                </filter>
+              </defs>
+              <!-- Base faint path -->
+              <path class="winding-path-base" d="M 50 0 C 80 100, 20 200, 50 300 C 80 400, 20 500, 50 600 C 80 700, 20 800, 50 900 C 80 950, 50 1000, 50 1000" fill="none" stroke="rgba(212, 175, 55, 0.15)" stroke-width="2" />
+              <!-- Lit up path -->
+              <path class="winding-path-active" d="M 50 0 C 80 100, 20 200, 50 300 C 80 400, 20 500, 50 600 C 80 700, 20 800, 50 900 C 80 950, 50 1000, 50 1000" fill="none" stroke="url(#gold-glow)" stroke-width="4" filter="url(#glow-filter)" />
+            </svg>
             <div class="schedule-card reveal">
               <div class="schedule-card-inner">
                 <div class="schedule-card-copy">
