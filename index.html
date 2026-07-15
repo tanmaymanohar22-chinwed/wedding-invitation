@@ -79,15 +79,6 @@
           </p>
         </div>
 
-        <!-- BOTTOM: Timer (below rings) -->
-        <div class="hero-details-section">
-          <div class="countdown" id="countdown">
-            <div><span id="days">00</span><small>Days</small></div>
-            <div><span id="hours">00</span><small>Hours</small></div>
-            <div><span id="minutes">00</span><small>Minutes</small></div>
-            <div><span id="seconds">00</span><small>Seconds</small></div>
-          </div>
-        </div>
 
       </div>
 
@@ -105,6 +96,29 @@
               Together with our families invite you to<br>
               celebrate with us as we begin our forever.
             </p>
+          </div>
+        </div>
+      </section>
+      <section class="section reveal-section" id="reveal">
+        <div class="container reveal-container">
+          <!-- The scratch card container -->
+          <div class="scratch-wrapper">
+            <!-- What gets revealed -->
+            <div class="scratch-content">
+              <h3>August 21, 2026</h3>
+            </div>
+            <!-- The canvas that covers it -->
+            <canvas id="scratchCanvas"></canvas>
+          </div>
+
+          <!-- Timer container (initially hidden) -->
+          <div class="countdown-wrapper hidden" id="revealCountdownWrapper">
+            <div class="countdown" id="countdown">
+              <div><span id="days">00</span><small>Days</small></div>
+              <div><span id="hours">00</span><small>Hours</small></div>
+              <div><span id="minutes">00</span><small>Minutes</small></div>
+              <div><span id="seconds">00</span><small>Seconds</small></div>
+            </div>
           </div>
         </div>
       </section>
@@ -318,7 +332,8 @@
 
     <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
 
-    <script src="js/main.js?v=20260711-5"></script>
+    <script src="js/main.js"></script>
+    <script src="js/scratch.js"></script>
     <script src="js/gallery.js?v=20260711-5"></script>
     <script src="js/audio-player.js?v=20260711-5"></script>
 </body>

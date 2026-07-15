@@ -921,4 +921,72 @@ blockquote span { display: block; margin-top: 0.8rem; font-size: 0.95rem; color:
 }
 @keyframes drift { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
 
+/* Scratch Reveal Section */
+.reveal-section {
+  padding: 4rem 1.5rem;
+  background-color: #fefbf6;
+  text-align: center;
+}
+.reveal-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.scratch-wrapper {
+  position: relative;
+  width: 300px;
+  height: 150px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  background: white;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+.scratch-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fdfaf5;
+}
+.scratch-content h3 {
+  font-size: 2.2rem;
+  color: var(--primary);
+  margin: 0;
+  font-family: 'Great Vibes', cursive;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.scratch-wrapper.revealed .scratch-content h3 {
+  opacity: 1;
+  transform: scale(1);
+}
+#scratchCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  cursor: crosshair;
+  touch-action: none; /* Prevent scrolling on touch */
+}
 
+/* Timer transition */
+.countdown-wrapper {
+  transition: opacity 1s ease, transform 1s ease;
+}
+.countdown-wrapper.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+}
+.countdown-wrapper.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
