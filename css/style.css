@@ -190,7 +190,7 @@ a { color: inherit; text-decoration: none; }
     gap: 0.5rem;
     padding-bottom: 0.5rem;
     margin-top: 0.5rem !important; /* Right below the invitation text */
-    margin-bottom: 1.5rem !important; /* Small gap from the absolute bottom */
+    margin-bottom: 16vh !important; /* Pushed up into the clear space above the bottom flowers */
   }
 
   /* Brand: wrap on mobile to prevent cut-off */
