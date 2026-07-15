@@ -512,7 +512,7 @@ h2 { font-size: clamp(2rem, 3vw, 2.8rem); }
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 1.5rem;
+  padding: calc(1rem + env(safe-area-inset-top)) 1.5rem 1rem 1.5rem;
   transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 .navbar.scrolled { background: rgba(250, 249, 246, 0.95); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
@@ -900,11 +900,11 @@ blockquote span { display: block; margin-top: 0.8rem; font-size: 0.95rem; color:
 }
 .rsvp-form button { justify-self: start; }
 .back-to-top {
-  position: fixed; right: 1.2rem; bottom: 1.2rem; border: none; width: 48px; height: 48px; border-radius: 50%; background: var(--primary); color: white; cursor: pointer; box-shadow: 0 12px 30px rgba(0,0,0,0.18); display: none; z-index: 1000;
+  position: fixed; right: 1.2rem; bottom: calc(1.2rem + env(safe-area-inset-bottom)); border: none; width: 48px; height: 48px; border-radius: 50%; background: var(--primary); color: white; cursor: pointer; box-shadow: 0 12px 30px rgba(0,0,0,0.18); display: none; z-index: 1000;
 }
 .back-to-top.show { display: block; }
 .music-player {
-  position: fixed; left: 1rem; bottom: 1rem; z-index: 1000; display: flex; align-items: center; gap: 0.6rem; padding: 0.7rem 0.9rem; border-radius: 999px; background: rgba(255,255,255,0.95); box-shadow: 0 10px 24px rgba(0,0,0,0.14);
+  position: fixed; left: 1rem; bottom: calc(1rem + env(safe-area-inset-bottom)); z-index: 1000; display: flex; align-items: center; gap: 0.6rem; padding: 0.7rem 0.9rem; border-radius: 999px; background: rgba(255,255,255,0.95); box-shadow: 0 10px 24px rgba(0,0,0,0.14);
 }
 .music-btn {
   border: none; width: 38px; height: 38px; border-radius: 50%; background: var(--primary); color: white; cursor: pointer;

@@ -181,4 +181,13 @@
   .welcome-overlay::after {
     background: linear-gradient(180deg, rgba(22, 18, 27, 0.22), rgba(22, 18, 27, 0.5));
   }
+
+  .family-section {
+    padding-top: 10rem;
+    padding-bottom: 4rem;
+  }
+  
+  .family-names {
+    margin: 2rem 0;
+  }
 }
