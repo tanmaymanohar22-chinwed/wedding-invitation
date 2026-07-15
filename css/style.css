@@ -262,16 +262,26 @@ a { color: inherit; text-decoration: none; }
   
   /* Schedule mobile adjustments */
   .schedule-list {
-    gap: 1rem;
+    gap: 1.5rem;
+  }
+  .winding-path-svg {
+    left: 40px;
+    width: 60px;
+  }
+  .schedule-list .schedule-rail {
+    left: calc(40px - 30px + (var(--heart-x-pct, 0.5) * 60px));
   }
   .schedule-card-inner {
-    gap: 1rem; /* Reduce gap on narrow screens */
+    padding-left: 85px; /* Push text away from the left curve */
+    grid-template-columns: 1fr; /* Stack title and time vertically */
+    gap: 0.2rem;
   }
   .schedule-title {
     font-size: 1.2rem;
   }
   .schedule-time {
     font-size: 0.95rem;
+    text-align: left;
   }
 }
 .sparkles {
@@ -709,12 +719,12 @@ blockquote span { display: block; margin-top: 0.8rem; font-size: 0.95rem; color:
 }
 .winding-path-svg {
   position: absolute;
-  top: 3rem;
-  bottom: 3rem;
+  top: 0;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
   width: 100px;
-  height: calc(100% - 6rem);
+  height: 100%;
   z-index: 1;
   pointer-events: none;
 }
@@ -726,7 +736,7 @@ blockquote span { display: block; margin-top: 0.8rem; font-size: 0.95rem; color:
 
 .schedule-list .schedule-rail {
   position: absolute;
-  left: var(--heart-x, 50%); /* Precisely tracks the SVG path */
+  left: calc(50% - 50px + (var(--heart-x-pct, 0.5) * 100px)); /* Matches the 100px SVG perfectly */
   top: var(--ball-top, 0px);
   width: auto;
   height: auto;
