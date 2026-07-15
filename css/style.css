@@ -735,9 +735,12 @@ blockquote span { display: block; margin-top: 0.8rem; font-size: 0.95rem; color:
   animation: bellChime 1.8s ease-in-out infinite;
 }
 .schedule-list .schedule-rail::before {
-  content: '💖';
+  content: '';
   display: inline-block;
-  filter: saturate(1.2) drop-shadow(0 0 12px rgba(212, 175, 55, 0.55));
+  width: 1.5rem;
+  height: 1.5rem;
+  background: url('../images/bell-timeline.svg') center center / contain no-repeat;
+  filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.45));
 }
 .schedule-list .schedule-rail::after {
   content: '';

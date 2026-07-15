@@ -1,0 +1,16 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bellGold" x1="12" y1="6" x2="52" y2="58" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F7E6A8"/>
+      <stop offset="0.45" stop-color="#D4AF37"/>
+      <stop offset="1" stop-color="#8A6916"/>
+    </linearGradient>
+  </defs>
+  <path d="M32 10C24.82 10 19 15.82 19 23V28.2C19 33.06 17.36 37.8 14.5 41.5L12 45H52L49.5 41.5C46.64 37.8 45 33.06 45 28.2V23C45 15.82 39.18 10 32 10Z" fill="url(#bellGold)" stroke="#800020" stroke-width="2.3" stroke-linejoin="round"/>
+  <path d="M26 15.5C27.7 14.18 29.74 13.5 32 13.5C34.26 13.5 36.3 14.18 38 15.5" stroke="#FFF7D8" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M25 46H39C38.22 49.38 35.33 52 32 52C28.67 52 25.78 49.38 25 46Z" fill="#800020"/>
+  <path d="M32 18V24.5" stroke="#FFF7D8" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M32 52V56" stroke="#800020" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M21 25C21.7 22.2 24.1 20.2 27.2 19.4" stroke="#FFF7D8" stroke-width="2.1" stroke-linecap="round" opacity="0.9"/>
+  <path d="M43 25C42.3 22.2 39.9 20.2 36.8 19.4" stroke="#FFF7D8" stroke-width="2.1" stroke-linecap="round" opacity="0.9"/>
+</svg>
