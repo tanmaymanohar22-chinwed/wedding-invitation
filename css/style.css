@@ -709,11 +709,12 @@ blockquote span { display: block; margin-top: 0.8rem; font-size: 0.95rem; color:
 }
 .winding-path-svg {
   position: absolute;
-  top: 0;
+  top: 3rem;
+  bottom: 3rem;
   left: 50%;
   transform: translateX(-50%);
   width: 100px;
-  height: 100%;
+  height: calc(100% - 6rem);
   z-index: 1;
   pointer-events: none;
 }
@@ -725,7 +726,7 @@ blockquote span { display: block; margin-top: 0.8rem; font-size: 0.95rem; color:
 
 .schedule-list .schedule-rail {
   position: absolute;
-  left: calc(50% + (sin(var(--scroll-pct, 0) / 15) * 30px)); /* Sways with the vine */
+  left: var(--heart-x, 50%); /* Precisely tracks the SVG path */
   top: var(--ball-top, 0px);
   width: auto;
   height: auto;

@@ -84,6 +84,23 @@ if (scheduleCards.length && scheduleList) {
     
     scheduleList.style.setProperty('--ball-top', `${offset}px`);
     scheduleList.style.setProperty('--scroll-pct', scrollPct);
+    
+    // Calculate exact X position by measuring the SVG path length
+    const svgPath = scheduleList.querySelector('.winding-path-base');
+    if (svgPath) {
+      const pathLength = svgPath.getTotalLength();
+      // Clamp to 0-1 for getting the point along the SVG length
+      let clampedPct = scrollPct / 100;
+      if (clampedPct < 0) clampedPct = 0;
+      if (clampedPct > 1) clampedPct = 1;
+      
+      const point = svgPath.getPointAtLength(pathLength * clampedPct);
+      // Since viewBox is 0 0 100 1000, point.x gives us a percentage value (0 to 100)
+      scheduleList.style.setProperty('--heart-x', `calc(50% + ${point.x - 50}px)`); 
+      // The SVG wrapper is 100px wide, so point.x (0 to 100) translates exactly to 0px to 100px across the wrapper width!
+      // Center of the list is 50%, and the wrapper is centered. 
+      // Left edge of SVG is at 50% - 50px.
+    }
   };
 
   window.addEventListener('scroll', updateScheduleRail, { passive: true });
