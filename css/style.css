@@ -262,7 +262,7 @@ a { color: inherit; text-decoration: none; }
   
   /* Family section mobile adjustments */
   .family-section {
-    background-position: 25% top !important; /* Shift left to reveal pigeon */
+    background-position: 40% top !important; /* Balanced to show both pigeon on left and couple in center */
   }
 }
 .sparkles {
