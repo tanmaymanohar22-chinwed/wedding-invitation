@@ -618,11 +618,11 @@ h2 { font-size: clamp(2rem, 3vw, 2.8rem); }
   margin: 1.5rem auto 0;
   width: min(150px, 35vw);
   height: auto;
-  opacity: 0.85; /* Slightly more visible now that it's a centerpiece */
+  opacity: 0.9; 
   mix-blend-mode: multiply; /* Magically removes the white background and blends with the hero background! */
   pointer-events: none;
   z-index: 2;
-  filter: contrast(1.1); /* Enhance the gold colors slightly when multiplied */
+  filter: brightness(1.1) contrast(1.15); /* Pushes off-white backgrounds to pure white so they disappear completely */
 }
 .hero-content, .hero-float { position: relative; z-index: 1; }
 .eyebrow {
