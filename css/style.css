@@ -555,9 +555,10 @@ h2 { font-size: clamp(2rem, 3vw, 2.8rem); }
   min-height: 80vh; /* Reduced from 100vh so the scratch section peeks up */
   position: relative;
   display: grid;
-  place-items: center;
+  align-items: start; /* Pushes text to the top */
+  justify-items: center;
   text-align: center;
-  padding: 4.5rem 1.5rem 3rem;
+  padding: 6.5rem 1.5rem 3rem; /* Increased top padding so it's not hugging the extreme top */
   background: #fefbf6 url('../images/bg_option1.jpg') center center/contain no-repeat;
   color: var(--ink);
 }
