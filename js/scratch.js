@@ -11,7 +11,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const ctx = canvas.getContext("2d");
     let isDrawing = false;
-    let isRevealed = false;
+    
+    // Attach reveal function to the wrapper so it can be called globally
+    wrapper.forceReveal = function() {
+      if (wrapper.classList.contains("revealed")) return;
+      wrapper.classList.add("revealed");
+      canvas.style.transition = "opacity 0.8s ease";
+      canvas.style.opacity = "0";
+      setTimeout(() => {
+        canvas.style.display = "none";
+      }, 800);
+    };
 
     function resizeCanvas() {
       canvas.width = wrapper.offsetWidth;
@@ -20,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function initCanvas() {
-      if (isRevealed) return;
+      if (wrapper.classList.contains("revealed")) return;
       ctx.globalCompositeOperation = "source-over"; // Reset to draw normal
       ctx.fillStyle = "#7A1A22"; // Rich burgundy
       ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -47,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function startDrawing(e) {
-      if (isRevealed) return;
+      if (wrapper.classList.contains("revealed")) return;
       isDrawing = true;
       scratch(e);
     }
@@ -58,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function scratch(e) {
-      if (!isDrawing || isRevealed) return;
+      if (!isDrawing || wrapper.classList.contains("revealed")) return;
       e.preventDefault(); // Prevent scrolling on touch
       const pos = getMousePos(e);
       
@@ -69,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function checkReveal() {
-      if (isRevealed) return;
+      if (wrapper.classList.contains("revealed")) return;
       
       const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
       const pixels = imageData.data;
@@ -84,18 +94,8 @@ document.addEventListener("DOMContentLoaded", function () {
       const totalPixels = pixels.length / 16;
       const percentCleared = (transparentPixels / totalPixels) * 100;
       
-      if (percentCleared > 40) { // Threshold to reveal
-        isRevealed = true;
-        wrapper.classList.add("revealed");
-        
-        // Fade out canvas
-        canvas.style.transition = "opacity 0.8s ease";
-        canvas.style.opacity = "0";
-        
-        setTimeout(() => {
-          canvas.style.display = "none";
-          checkAllRevealed();
-        }, 800);
+      if (percentCleared > 35) { // Threshold to reveal
+        triggerGlobalReveal();
       }
     }
 
@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
     // Handle resize
     window.addEventListener("resize", () => {
-      if (!isRevealed) {
+      if (!wrapper.classList.contains("revealed")) {
         resizeCanvas();
       }
     });
@@ -120,9 +120,14 @@ document.addEventListener("DOMContentLoaded", function () {
     resizeCanvas();
   });
 
-  function checkAllRevealed() {
-    totalRevealed++;
-    if (totalRevealed === 3 && timerWrapper) {
+  function triggerGlobalReveal() {
+    // Reveal all blocks
+    blocks.forEach(b => {
+      if (b.forceReveal) b.forceReveal();
+    });
+    
+    // Show timer
+    if (timerWrapper && timerWrapper.classList.contains("hidden")) {
       timerWrapper.classList.remove("hidden");
       timerWrapper.classList.add("visible");
     }
