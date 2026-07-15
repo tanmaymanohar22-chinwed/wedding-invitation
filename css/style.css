@@ -166,11 +166,22 @@ a { color: inherit; text-decoration: none; }
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start; /* Stack items from top */
     flex: 1;
     min-height: calc(100vh - 4.5rem - 1.5rem);
     gap: 0;
     margin-top: 0;
+  }
+  .hero-names-section {
+    margin-top: 10vh !important; /* Push into Box 1 (above cross) */
+    padding-top: 0;
+  }
+  .hero-invitation-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30vh !important; /* Push into Box 2 (between cross and rings) */
+    width: 100%;
   }
   .hero-details-section {
     display: flex;
@@ -178,26 +189,8 @@ a { color: inherit; text-decoration: none; }
     align-items: center;
     gap: 0.5rem;
     padding-bottom: 0.8rem;
-    margin-top: auto !important;
-    margin-bottom: 8rem !important; /* Pushed up significantly to sit just below rings */
-  }
-  .hero-invitation-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 13rem !important;
-    width: 100%;
-  }
-  .hero-names-section {
-    margin-top: 0;
-    padding-top: 0;
-  }
-  .hero-details-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    padding-bottom: 0.5rem;
+    margin-top: 15vh !important; /* Push into Box 3 (below rings) */
+    margin-bottom: 2vh !important;
   }
 
   /* Brand: wrap on mobile to prevent cut-off */
