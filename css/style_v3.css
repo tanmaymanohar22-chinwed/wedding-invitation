@@ -610,8 +610,19 @@ h2 { font-size: clamp(2rem, 3vw, 2.8rem); }
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
+  gap: 0.8rem;
+}
+.hero-bells {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  width: min(120px, 25vw);
+  height: auto;
+  opacity: 0.7; /* Faded out slightly */
+  mix-blend-mode: multiply; /* Magically removes the white background and blends with the hero background! */
+  pointer-events: none;
+  z-index: 2;
+  filter: contrast(1.1); /* Enhance the gold colors slightly when multiplied */
 }
 .hero-content, .hero-float { position: relative; z-index: 1; }
 .eyebrow {
