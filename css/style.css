@@ -180,7 +180,7 @@ a { color: inherit; text-decoration: none; }
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 30vh !important; /* Push into Box 2 (between cross and rings) */
+    margin-top: auto !important; /* Pushes this and everything below it to the bottom */
     width: 100%;
   }
   .hero-details-section {
@@ -188,9 +188,9 @@ a { color: inherit; text-decoration: none; }
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
-    padding-bottom: 0.8rem;
-    margin-top: 15vh !important; /* Push into Box 3 (below rings) */
-    margin-bottom: 2vh !important;
+    padding-bottom: 0.5rem;
+    margin-top: 0.5rem !important; /* Right below the invitation text */
+    margin-bottom: 1.5rem !important; /* Small gap from the absolute bottom */
   }
 
   /* Brand: wrap on mobile to prevent cut-off */
