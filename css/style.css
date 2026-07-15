@@ -753,23 +753,6 @@ blockquote span { display: block; margin-top: 0.8rem; font-size: 0.95rem; color:
   position: relative;
   z-index: 2;
 }
-.schedule-card::before {
-  content: '';
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 10px;
-  height: 10px;
-  background: var(--secondary);
-  transform: translate(-50%, -50%) rotate(45deg);
-  box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.2);
-  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
-}
-.schedule-card.active::before {
-  background: var(--primary);
-  transform: translate(-50%, -50%) rotate(45deg) scale(1.2);
-  box-shadow: 0 0 0 6px rgba(128, 0, 32, 0.15);
-}
 
 .schedule-card-inner {
   display: grid;
