@@ -69,19 +69,13 @@ if (scheduleCards.length && scheduleList) {
   scheduleCards.forEach((card) => scheduleObserver.observe(card));
 
   const updateScheduleRail = () => {
-    const activeCard = Array.from(scheduleCards).find((card) => card.classList.contains('active')) || scheduleCards[0];
+    const baseOffset = navbar ? navbar.offsetHeight + 70 : 110;
+    const sectionTop = scheduleList.getBoundingClientRect().top;
+    const sectionHeight = scheduleList.offsetHeight;
+    const travelRange = Math.max(sectionHeight - 140, 1);
+    const progress = Math.min(1, Math.max(0, (-sectionTop + window.innerHeight * 0.12) / travelRange));
 
-    if (!activeCard) {
-      return;
-    }
-
-    const navbarOffset = navbar ? navbar.offsetHeight + 28 : 72;
-    const cardCenter = activeCard.offsetTop + (activeCard.offsetHeight / 2);
-
-    scheduleList.style.setProperty(
-      '--ball-top',
-      `${Math.max(navbarOffset, Math.min(cardCenter, scheduleList.offsetHeight))}px`
-    );
+    scheduleList.style.setProperty('--ball-top', `${baseOffset + progress * travelRange}px`);
   };
 
   window.addEventListener('scroll', updateScheduleRail, { passive: true });

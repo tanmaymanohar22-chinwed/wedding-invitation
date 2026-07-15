@@ -325,10 +325,10 @@ a { color: inherit; text-decoration: none; }
   54% { transform: translate(-50%, -50%) scale(1.05) rotate(-2deg); }
   72% { transform: translate(-50%, -50%) scale(1.08) rotate(2deg); }
 }
-@keyframes bellAura {
-  0% { transform: scale(0.85); opacity: 0.28; }
-  50% { transform: scale(1.25); opacity: 0.55; }
-  100% { transform: scale(1.5); opacity: 0; }
+@keyframes heartPulse {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); }
+  40% { transform: translate(-50%, -50%) scale(1.08); }
+  70% { transform: translate(-50%, -50%) scale(0.98); }
 }
 img { width: 100%; display: block; object-fit: cover; }
 .container { width: min(1120px, calc(100% - 2rem)); margin: 0 auto; }
@@ -732,21 +732,12 @@ blockquote span { display: block; margin-top: 0.8rem; font-size: 0.95rem; color:
   font-size: 1.95rem;
   line-height: 1;
   filter: drop-shadow(0 4px 10px rgba(128, 0, 32, 0.18));
-  animation: bellChime 1.8s ease-in-out infinite;
+  animation: heartPulse 2s ease-in-out infinite;
 }
 .schedule-list .schedule-rail::before {
   content: '💖';
   display: inline-block;
   filter: saturate(1.2) drop-shadow(0 0 12px rgba(212, 175, 55, 0.55));
-}
-.schedule-list .schedule-rail::after {
-  content: '';
-  position: absolute;
-  inset: -0.65rem;
-  border-radius: 999px;
-  border: 1px solid rgba(212, 175, 55, 0.6);
-  opacity: 0.35;
-  animation: bellAura 2.1s ease-in-out infinite;
 }
 
 .schedule-card {
