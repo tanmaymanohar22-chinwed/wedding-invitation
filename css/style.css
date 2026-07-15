@@ -888,13 +888,13 @@ blockquote span { display: block; margin-top: 0.8rem; font-size: 0.95rem; color:
 }
 .rsvp-form-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 1fr; /* Stack top to bottom instead of side-by-side */
   gap: 0.8rem;
 }
 .rsvp-form-grid textarea,
 .rsvp-form-grid input,
 .rsvp-form-grid select {
-  grid-column: span 1;
+  grid-column: 1 / -1;
 }
 .rsvp-form-grid textarea {
   grid-column: 1 / -1;
@@ -1025,10 +1025,15 @@ blockquote span { display: block; margin-top: 0.8rem; font-size: 0.95rem; color:
 .reveal-section .countdown {
   width: 100%;
   max-width: 395px; /* Matches the ~395px width of the 3 scratch blocks */
-  margin: 0 auto;
+  margin: 2rem auto 0; /* 2rem gap from above canvas */
   gap: clamp(0.2rem, 1vw, 0.8rem) !important;
   flex-wrap: nowrap !important; /* Force all 4 timer blocks onto one line */
   justify-content: center;
+}
+.reveal-section .countdown span {
+  font-size: clamp(2rem, 7vw, 3.2rem) !important; /* Massively increased size */
+  line-height: 1;
+  margin-bottom: 0.2rem;
 }
 .reveal-section .countdown > div {
   flex: 1;
