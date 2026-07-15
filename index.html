@@ -146,24 +146,32 @@
             <h2>Our cherished moments</h2>
           </div>
           <div class="gallery-grid">
-            <!-- 1st Image: Couple (moved from 4th position) -->
-            <div class="gallery-card reveal" data-image="images/51712.jpg" data-title="Joel & Joy">
+            <div class="gallery-card gallery-card--feature reveal" data-image="images/51712.jpg" data-title="Joel & Joy">
               <img src="images/51712.jpg" alt="Joel and Joy" />
+              <div class="gallery-card-caption">
+                <span>Joel &amp; Joy</span>
+                <small>Our joyful beginning</small>
+              </div>
             </div>
-            
-            <!-- 2nd Image: Groom -->
+
             <div class="gallery-card reveal" data-image="images/groom.jpg" data-title="Joel">
               <img src="images/groom.jpg" alt="Joel" style="object-position: top center;" />
+              <div class="gallery-card-caption">
+                <span>Joel</span>
+                <small>With gratitude</small>
+              </div>
             </div>
-            
-            <!-- 3rd Image: Bride -->
+
             <div class="gallery-card reveal" data-image="images/bride.jpg" data-title="Joy">
               <img src="images/bride.jpg" alt="Joy" style="object-position: top center;" />
+              <div class="gallery-card-caption">
+                <span>Joy</span>
+                <small>With joy</small>
+              </div>
             </div>
-            
-            <!-- 4th Image: Empty placeholder for future photo -->
-            <div class="gallery-card reveal" style="display: flex; align-items: center; justify-content: center; min-height: 270px; background: #faf8f5; border: 2px dashed rgba(212, 175, 55, 0.4);">
-              <span style="color: var(--secondary); font-style: italic; font-family: 'Cormorant Garamond', serif; font-size: 1.2rem;">Coming soon</span>
+
+            <div class="gallery-card gallery-card--coming reveal">
+              <span class="gallery-coming-label">Coming soon</span>
             </div>
           </div>
         </div>
@@ -176,15 +184,17 @@
             <h2>RSVP</h2>
           </div>
           <form id="rsvpForm" class="rsvp-form reveal" data-sheet-url="https://script.google.com/macros/s/AKfycbw8heFJ3lE-EYjU7mX8YhQ1C2d_aPptDuD0BX8_ZMBl_4gAyi3bjMFgtuREl9gFYNal/exec" novalidate>
-            <input type="text" name="name" placeholder="Full Name" required />
-            <input type="email" name="email" placeholder="Email" required />
-            <input type="tel" name="phone" placeholder="Phone" />
-            <select name="attendance">
-              <option>Attending the ceremony</option>
-              <option>Yes, I will attend</option>
-              <option>Regretfully, I cannot</option>
-            </select>
-            <textarea name="message" rows="4" placeholder="Your blessings or message"></textarea>
+            <div class="rsvp-form-grid">
+              <input type="text" name="name" placeholder="Full Name" required />
+              <input type="email" name="email" placeholder="Email" required />
+              <input type="tel" name="phone" placeholder="Phone" />
+              <select name="attendance">
+                <option>Attending the ceremony</option>
+                <option>Yes, I will attend</option>
+                <option>Regretfully, I cannot</option>
+              </select>
+              <textarea name="message" rows="4" placeholder="Your blessings or message"></textarea>
+            </div>
             <button type="submit" class="btn btn-primary">Send RSVP</button>
           </form>
           <p id="rsvpMessage" class="form-message" role="status" aria-live="polite"></p>
