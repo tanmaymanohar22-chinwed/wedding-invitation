@@ -728,7 +728,6 @@ blockquote span { display: block; margin-top: 0.8rem; font-size: 0.95rem; color:
   background: transparent;
   box-shadow: none;
   transform: translate(-50%, -50%);
-  transition: top 0.35s ease;
   z-index: 1;
   font-size: 1.95rem;
   line-height: 1;
