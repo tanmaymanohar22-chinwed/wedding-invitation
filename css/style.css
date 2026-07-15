@@ -259,11 +259,6 @@ a { color: inherit; text-decoration: none; }
   .countdown small {
     font-size: 0.6rem !important;
   }
-  
-  /* Family section mobile adjustments */
-  .family-section {
-    background-position: 40% top !important; /* Balanced to show both pigeon on left and couple in center */
-  }
 }
 .sparkles {
   position: absolute;
