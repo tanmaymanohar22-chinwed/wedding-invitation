@@ -264,16 +264,21 @@ a { color: inherit; text-decoration: none; }
   .schedule-list {
     gap: 1.5rem;
   }
+  .winding-path-svg {
+    width: 60px;
+  }
+  .schedule-list .schedule-rail {
+    left: calc(50% - 30px + (var(--heart-x-pct, 0.5) * 60px));
+  }
   .schedule-card-inner {
-    grid-template-columns: 1fr; /* Stack title and time vertically */
-    gap: 0.2rem;
+    grid-template-columns: 1fr 1fr; /* Split down the middle */
+    gap: 2.5rem; /* Gap for the 60px curve */
   }
   .schedule-title {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
   .schedule-time {
     font-size: 0.95rem;
-    text-align: left;
   }
 }
 .sparkles {
@@ -713,8 +718,9 @@ blockquote span { display: block; margin-top: 0.8rem; font-size: 0.95rem; color:
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 20px;
-  width: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
   height: 100%;
   z-index: 1;
   pointer-events: none;
@@ -727,7 +733,7 @@ blockquote span { display: block; margin-top: 0.8rem; font-size: 0.95rem; color:
 
 .schedule-list .schedule-rail {
   position: absolute;
-  left: calc(20px + (var(--heart-x-pct, 0.5) * 60px)); /* Matches the 60px SVG offset */
+  left: calc(50% - 50px + (var(--heart-x-pct, 0.5) * 100px)); /* Tracks 100px SVG perfectly */
   top: var(--ball-top, 0px);
   width: auto;
   height: auto;
@@ -765,15 +771,15 @@ blockquote span { display: block; margin-top: 0.8rem; font-size: 0.95rem; color:
 
 .schedule-card-inner {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 1.5rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem; /* Perfect gap for 100px SVG */
   align-items: center;
-  padding: 0.95rem 1rem 0.95rem 80px; /* 80px padding avoids the left-aligned SVG */
+  padding: 0.95rem 1rem;
 }
 .schedule-card-copy {
   display: grid;
   gap: 0.12rem;
-  text-align: left;
+  text-align: right;
 }
 .schedule-title {
   font-family: 'Cormorant Garamond', serif;
@@ -790,8 +796,8 @@ blockquote span { display: block; margin-top: 0.8rem; font-size: 0.95rem; color:
   font-size: 1.05rem;
   font-weight: 700;
   color: var(--ink);
-  text-align: right;
-  white-space: nowrap;
+  text-align: left;
+  white-space: normal;
 }
 .gallery-grid {
   display: grid;
