@@ -437,7 +437,7 @@ h1, h2, h3 {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(254, 251, 246, 0.72); /* Fades the background to a soft watermark */
+  background: rgba(254, 251, 246, 0.88); /* Significantly fades the background to make it duller */
   z-index: 0;
 }
 .family-content {
@@ -734,7 +734,7 @@ blockquote span { display: block; margin-top: 0.8rem; font-size: 0.95rem; color:
   filter: drop-shadow(0 4px 10px rgba(128, 0, 32, 0.18));
 }
 .schedule-list .schedule-rail::before {
-  content: '🌸';
+  content: '❤️';
   display: inline-block;
   filter: saturate(1.2) drop-shadow(0 0 12px rgba(212, 175, 55, 0.55));
 }
