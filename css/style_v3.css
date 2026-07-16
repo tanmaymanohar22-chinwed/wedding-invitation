@@ -1027,7 +1027,7 @@ blockquote span { display: block; margin-top: 0.8rem; font-size: 0.95rem; color:
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #fdfaf5;
+  background: transparent;
 }
 .scratch-content h3 {
   font-size: clamp(1.6rem, 6vw, 2.8rem);
