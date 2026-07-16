@@ -940,10 +940,14 @@ blockquote span { display: block; margin-top: 0.8rem; font-size: 0.95rem; color:
 }
 .rsvp-form input:not(:placeholder-shown),
 .rsvp-form textarea:not(:placeholder-shown),
-.rsvp-form select:valid {
-  background-color: #fcf9f5;
+.rsvp-form select:valid,
+.rsvp-form input:focus,
+.rsvp-form textarea:focus,
+.rsvp-form select:focus {
+  background-color: rgba(128, 0, 32, 0.05); /* Soft rich burgundy tint */
   color: var(--primary);
-  border-color: rgba(128, 0, 32, 0.4);
+  border-color: var(--primary);
+  outline: none;
 }
 .rsvp-form button { justify-self: start; }
 .back-to-top {
