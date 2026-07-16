@@ -37,7 +37,7 @@
   }
 
   .hero {
-    padding: 4.75rem 1.5rem 2.2rem;
+    padding: 2rem 1.5rem; /* Symmetrical padding for perfect flexbox centering */
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -168,7 +168,7 @@
   }
   .nav-links.open { display: flex; }
   .hero {
-    padding-top: 7rem;
+    padding: 2rem 1.5rem; /* Symmetrical padding for perfect flexbox centering */
     background-color: #fefbf6;
   }
   .hero-actions { flex-direction: column; align-items: center; }

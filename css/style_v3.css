@@ -559,7 +559,7 @@ h2 { font-size: clamp(2rem, 3vw, 2.8rem); }
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 4.5rem 1.5rem 3rem; /* Normal padding */
+  padding: 2rem 1.5rem; /* Symmetrical padding for perfect flexbox centering */
   background: #fefbf6 url('../images/bg_schedule_floral.jpg') center center/cover no-repeat;
   color: var(--ink);
 }
