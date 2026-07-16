@@ -1012,8 +1012,8 @@ blockquote span { display: block; margin-top: 0.8rem; font-size: 0.95rem; color:
 }
 .scratch-wrapper {
   position: relative;
-  width: clamp(100px, 30vw, 150px);
-  height: clamp(70px, 22vw, 100px);
+  width: clamp(100px, 32vw, 160px);
+  height: clamp(55px, 15vw, 75px);
   margin: 0;
   border-radius: 16px;
   overflow: hidden;
