@@ -618,10 +618,11 @@ h2 { font-size: clamp(2rem, 3vw, 2.8rem); }
   margin: 1.5rem auto 0;
   width: min(150px, 35vw);
   height: auto;
-  opacity: 0.9; 
-  mix-blend-mode: multiply; /* Multiplies out pure white backgrounds seamlessly */
+  opacity: 0.95; 
+  mix-blend-mode: darken; /* Darken ignores pure white, perfectly blending the image */
   pointer-events: none;
   z-index: 2;
+  filter: contrast(1.3) brightness(1.1); /* Pushes off-white backgrounds to pure white so they disappear completely */
 }
 .hero-content, .hero-float { position: relative; z-index: 1; }
 .eyebrow {
