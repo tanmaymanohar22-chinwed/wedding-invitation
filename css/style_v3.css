@@ -618,11 +618,9 @@ h2 { font-size: clamp(2rem, 3vw, 2.8rem); }
   margin: 1.5rem auto 0;
   width: min(150px, 35vw);
   height: auto;
-  opacity: 0.9; 
-  mix-blend-mode: darken; /* Erases the background so it perfectly matches the cream hero background */
+  opacity: 0.95; 
   pointer-events: none;
   z-index: 2;
-  filter: contrast(1.4) brightness(1.1); /* Forces any off-white pixels to become transparent in darken mode */
 }
 .hero-content, .hero-float { position: relative; z-index: 1; }
 .eyebrow {
