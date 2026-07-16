@@ -938,6 +938,13 @@ blockquote span { display: block; margin-top: 0.8rem; font-size: 0.95rem; color:
 .rsvp-form select option {
   color: var(--ink); /* Normal color for the actual dropdown options */
 }
+.rsvp-form input:not(:placeholder-shown),
+.rsvp-form textarea:not(:placeholder-shown),
+.rsvp-form select:valid {
+  background-color: #fcf9f5;
+  color: var(--primary);
+  border-color: rgba(128, 0, 32, 0.4);
+}
 .rsvp-form button { justify-self: start; }
 .back-to-top {
   position: fixed; right: 1.2rem; bottom: calc(1.2rem + env(safe-area-inset-bottom)); border: none; width: 48px; height: 48px; border-radius: 50%; background: var(--primary); color: white; cursor: pointer; box-shadow: 0 12px 30px rgba(0,0,0,0.18); display: none; z-index: 1000;
