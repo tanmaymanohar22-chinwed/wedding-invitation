@@ -1012,8 +1012,8 @@ blockquote span { display: block; margin-top: 0.8rem; font-size: 0.95rem; color:
 }
 .scratch-wrapper {
   position: relative;
-  width: clamp(85px, 28vw, 125px);
-  height: clamp(85px, 28vw, 125px);
+  width: clamp(100px, 30vw, 150px);
+  height: clamp(70px, 22vw, 100px);
   margin: 0;
   border-radius: 16px;
   overflow: hidden;
@@ -1070,7 +1070,7 @@ blockquote span { display: block; margin-top: 0.8rem; font-size: 0.95rem; color:
 }
 .reveal-section .countdown {
   width: 100%;
-  max-width: 395px; /* Matches the ~395px width of the 3 scratch blocks */
+  max-width: 520px; /* Expanded to match the new rectangular scratch blocks and prevent text overflow */
   margin: 2rem auto 0; /* 2rem gap from above canvas */
   gap: clamp(0.2rem, 1vw, 0.8rem) !important;
   flex-wrap: nowrap !important; /* Force all 4 timer blocks onto one line */
