@@ -974,7 +974,7 @@ blockquote span { display: block; margin-top: 0.8rem; font-size: 0.95rem; color:
 }
 .lightbox.open { display: grid; }
 .lightbox-content { max-width: 900px; width: 100%; text-align: center; }
-.lightbox-content img { max-height: 80vh; width: auto; margin: 0 auto; border-radius: 18px; }
+.lightbox-content img { max-height: 80vh; width: auto; max-width: 100%; object-fit: contain; margin: 0 auto; border-radius: 18px; }
 .lightbox-content p { color: white; margin-top: 0.8rem; }
 .lightbox-close {
   position: absolute; top: 1rem; right: 1rem; background: transparent; border: none; color: white; font-size: 2rem; cursor: pointer;
