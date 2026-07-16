@@ -949,6 +949,15 @@ blockquote span { display: block; margin-top: 0.8rem; font-size: 0.95rem; color:
   border-color: var(--primary) !important;
   outline: none !important;
 }
+
+/* Force override of browser autofill styles (blue/yellow backgrounds) */
+.rsvp-form input:-webkit-autofill,
+.rsvp-form textarea:-webkit-autofill,
+.rsvp-form select:-webkit-autofill {
+  -webkit-text-fill-color: var(--primary) !important;
+  -webkit-box-shadow: 0 0 0px 1000px #fcf9f5 inset !important;
+  border-color: var(--primary) !important;
+}
 .rsvp-form button { justify-self: start; }
 .back-to-top {
   position: fixed; right: 1.2rem; bottom: calc(1.2rem + env(safe-area-inset-bottom)); border: none; width: 48px; height: 48px; border-radius: 50%; background: var(--primary); color: white; cursor: pointer; box-shadow: 0 12px 30px rgba(0,0,0,0.18); display: none; z-index: 1000;

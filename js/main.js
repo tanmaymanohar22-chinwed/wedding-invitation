@@ -268,6 +268,7 @@ document.querySelectorAll('.rsvp-form input, .rsvp-form textarea, .rsvp-form sel
   el.addEventListener('input', checkFilled);
   el.addEventListener('change', checkFilled);
   el.addEventListener('blur', checkFilled);
+  el.addEventListener('paste', () => setTimeout(checkFilled, 10));
   
   // Initial check in case of browser autofill on load
   setTimeout(checkFilled, 100);
